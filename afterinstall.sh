@@ -18,4 +18,4 @@ aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS
 
 docker pull 805392809179.dkr.ecr.ap-southeast-2.amazonaws.com/oz-pipeline-04:latest
 
-docker run -td --name oz-s3-ecr-ec2 -v sample.war:/data -p 80:8080 805392809179.dkr.ecr.ap-southeast-2.amazonaws.com/oz-pipeline-04:latest
+docker run -td --name oz-s3-ecr-ec2 -v sample.war:/data 81:8090 805392809179.dkr.ecr.ap-southeast-2.amazonaws.com/oz-pipeline-04:latest
