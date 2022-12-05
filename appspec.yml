@@ -1,9 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: sample.war
+  - source: /home/ec2-user/oz
     destination: /home/ec2-user/oz
-  - source: 
 hooks:
 #   BeforeInstall:
 #     - location: before.sh
