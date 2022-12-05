@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+files:
+  - source: sample.war
+    destination: /home/ec2-user/oz
+  - source: 
+hooks:
+  BeforeInstall:
+    - location: before.sh
+      timeout: 100
+  AfterInstall:
+    - location: afterinstall.sh
+      timeout: 100
+  ApplicationStart:
+    - location: applicationstart.sh
+      timeout: 100
