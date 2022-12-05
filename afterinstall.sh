@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sudo su -
 mkdir /home/ec2-user/oz
 cd /home/ec2-user/oz
 
@@ -11,6 +11,8 @@ echo "credentials set successful"
 aws s3 cp s3://oz-s3-ec2-04/sample.war .
 
 yum install docker -y
+service docker start
+service docker status
 
 aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin 805392809179.dkr.ecr.ap-southeast-2.amazonaws.com
 
