@@ -4,8 +4,8 @@ mkdir /home/ec2-user/oz
 cd /home/ec2-user/oz
 
 echo "setting source bucket credentials"
-aws configure set aws_access_key_id AKIA3XBJG7TNRPSTXLOS
-aws configure set aws_secret_access_key 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
+aws configure set aws_access_key_id Access_Key
+aws configure set aws_secret_access_key Secret_Key
 echo "credentials set successful"
 
 aws s3 cp s3://oz-s3-ec2-04/sample.war .
