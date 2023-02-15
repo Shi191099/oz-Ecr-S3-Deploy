@@ -15,9 +15,9 @@ service docker start
 chmod 777 /var/run/docker.sock
 service docker status
 
-aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin $account_id.dkr.ecr.$region.amazonaws.com
+# aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin $account_id.dkr.ecr.$region.amazonaws.com
 
-docker pull $account_id.dkr.ecr.$region.amazonaws.com/oz-pipeline-04:latest
+# docker pull $account_id.dkr.ecr.$region.amazonaws.com/oz-pipeline-04:latest
 
-# docker run -td -v sample.war:/data -P $account_id.dkr.ecr.$region.amazonaws.com/oz-pipeline-04:latest
-docker run -td -P $account_id.dkr.ecr.$region.amazonaws.com/oz-pipeline-04:latest
+# # docker run -td -v sample.war:/data -P $account_id.dkr.ecr.$region.amazonaws.com/oz-pipeline-04:latest
+# docker run -td -P $account_id.dkr.ecr.$region.amazonaws.com/oz-pipeline-04:latest
